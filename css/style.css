@@ -1,0 +1,284 @@
+*,*:before, *:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html,body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Gilroy';
+}
+
+/*.wrapper {
+	max-width: 1336px;
+	margin: 0 auto;
+}*/
+
+.container-fluid {
+	max-width: 1340px;
+}
+
+.header {
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	background-color: #E5E5E5;
+}
+
+.header-body {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 96px;
+	align-items: center;
+}
+
+.header-logo {
+	flex: 0 0 150px;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+}
+
+.header-logo img {
+	max-width: 100%;
+	display: block;
+}
+
+.header-burger {}
+.header-menu {}
+
+.header-list {
+	display: flex;
+	position: relative;
+	z-index: 2;
+	margin-bottom: 0;
+}
+
+.header-list li {
+	list-style-type: none;
+	margin: 0 0 0 20px;
+}
+
+.header-link {
+	text-decoration: none;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 25px;
+	color: #161D27;
+}
+
+.header-link:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+.nav2 {
+	background-color: #161D27;
+	padding: 28px 0;
+}
+
+.nav2 .nav-link {
+	color: #fff;
+	font-weight: 300;
+	font-size: 22px;
+	padding: 0;
+}
+
+.nav2 .nav-link-active,
+.nav2 .nav-link-active:hover {
+	color: #FABE44;
+;
+}
+
+h1 {
+	/*font-family: 'TidyHand';*/
+	margin-bottom: 0 !important;
+}
+
+.top-section {
+	min-height: 100vh;
+	background: url('../img/pexels-max-vakhtbovych-8092430.jpg') no-repeat;
+
+	background-size: cover;
+	/*background: linear-gradient(to right, green 50%, red 50%);*/
+}
+
+.blur-section {
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(31px);	
+	height: 100vh;	
+	/*margin-top: -48px;*/
+	background: url('../img/main-page.png') no-repeat;
+	background-size: cover;
+}
+
+.blur-section h1 {
+	font-family: Gilroy;
+	font-weight: 800;
+	font-size: 167px;
+	line-height: 159px;
+	letter-spacing: -0.03em;
+	text-transform: uppercase;
+	color: transparent;
+	margin-bottom: 0 !important;
+	position: absolute;
+	top: 105px;
+}
+
+
+
+@media (max-width: 767px) {
+
+	body.lock {
+		overflow: hidden;
+	}
+
+	.header-logo {
+		display: none;
+	}
+	.header-body {
+		height: 58px;
+		justify-content: flex-end;
+	}
+	.header-logo {
+		flex: 0 0 50px;
+	}
+	.header-burger {
+		display: block;
+		cursor: pointer;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+	}
+	.header-burger span {
+		position: absolute;
+		background-color: #B8EE46;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+		transition: all 0.3s ease-out;
+	}
+	.header-burger:before,
+	.header-burger:after {
+		content: '';
+		background-color: #B8EE46;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease-out;
+	}
+	.header-burger:before {
+		top: 0;
+	}
+	.header-burger:after {
+		bottom: 0;
+	}
+	.header-burger.active span {
+		transform: scale(0);
+	}
+	.header-burger.active:before {
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.header-burger.active:after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	.header-burger.active {
+
+	}
+	.header-menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: all 0.3s ease-out;
+		background-color: #333333;
+		padding: 70px 10px 20px 10px;
+	}
+	.header-menu.active {
+		top: 0;
+	}
+	.header-list {
+		display: block;
+	}
+	.header-list li {
+		margin: 0 0 20px 0;
+	}
+	.nav2 {
+		position: fixed;
+		top: 0;
+		left: -999px;
+		height: 100%;
+		width: 100%;
+		z-index: 1000;
+		overflow-y: auto;
+		padding: 45px;
+		transition: all .30s;
+	}
+	.nav2 .nav-item {
+		display: block;
+		margin-bottom: 32px;
+		text-align: center;
+		justify-content: center;	
+	}
+	.nav {
+		display: block;
+	}
+	.vendo-cnstrctns {
+		margin: 0 auto;
+	}
+	.nav2 .container-fluid .row ul {
+		margin-top: 30px;
+	}
+	.close_mob_menu {
+		position: absolute;
+		cursor: pointer;
+		top: 15px;
+		right: 15px;
+	}
+	.mobile_menu_active {
+		left: 0;
+		transition: all .30s;
+	}
+
+	.mob_menu_logo {
+		margin-left: 8px;
+		margin-top: 50px;
+	}
+}
+
+
+
+@media (min-width: 768px) {
+
+	.close_mob_menu, .mob_menu_logo {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
